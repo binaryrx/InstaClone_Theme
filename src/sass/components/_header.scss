@@ -1,0 +1,113 @@
+
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+header{
+    position: fixed;
+    background:#fff;
+    width:100vw;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;;
+    height:77px;
+    outline: 1px solid #ececec;
+    transition: .2s ease-in-out;
+    .container{
+        display: flex;
+        align-items: center;
+        max-width: 900px;
+        width: 100%;
+   
+        div.logo{
+            width: 33.33%;
+            display: flex;
+            height: 77px;
+            align-items: center;
+            justify-content: flex-start;
+            a{
+                text-decoration: none;
+                display:flex;
+                align-items:center;
+                height:30px;
+                img{
+                 
+                    padding-left:10px;
+                    margin-top:7px;
+                    max-width: 100%;
+                    max-height: 100%;
+                    object-fit: contain;
+                }
+                svg{
+                    padding-right:10px;
+                    border-right: 0.5px solid #cccccc;
+                }
+            }
+        }
+
+        div.search{
+            width: 33.33%;
+            position: relative;
+            display:flex;
+            justify-content: center;
+            input{
+                width:215px;
+                height:28px;
+                background: #fafafa;
+                border: solid 1px #dbdbdb;
+                -webkit-box-pack: center;
+                -webkit-justify-content: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                &::placeholder{
+                    text-align:center;
+                }
+            }
+            // span{
+            //     position: absolute;
+            //     svg{
+                    
+            //         path{
+            //             height:auto;
+            //             width:20%;
+            //         }
+            //     }
+            // }
+        }
+        div.buttons{
+            width: 33.33%;
+            display:flex;
+            justify-content: flex-end;
+            div:not(:first-child),
+            div:not(:last-child){
+                margin-left:30px;
+            }
+        }
+        @media only screen and(max-width:900px){
+           
+            div.logo{
+                width:50%;
+                justify-content: flex-end;
+                a{
+                    height:30px;
+                    img{
+
+                    }
+                }
+            }
+             div.search{
+                display:none;
+            }
+            div.buttons{
+                width:50%;
+                justify-content: flex-start;
+            }
+        }
+
+        
+
+    }
+}
+
+main{
+    padding-top:77px;
+}
