@@ -5,7 +5,9 @@
   "main": "./js/index.js",
   "scripts": {
     "dev": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "watch" : "parcel watch index.html"
+    
   },
   "repository": {
     "type": "git",
