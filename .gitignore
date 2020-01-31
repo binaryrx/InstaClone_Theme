@@ -4,6 +4,8 @@ test/results
 test/coverage
 cuts
 dist
+.cache
+.vscode
 
 ## OS X
 .DS_Store

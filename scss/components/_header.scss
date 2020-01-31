@@ -1,0 +1,172 @@
+
+
+
+body{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color: $primary_text_color;
+}
+header{
+    position: fixed;
+    background:#fff;
+    width:100vw;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;;
+    height:77px;
+    outline: 1px solid #ececec;
+    transition: height .2s ease-in-out;
+    .container{
+        display: flex;
+        align-items: center;
+        max-width: 950px;
+        width: 100%;
+        div{
+            width: 33.33%;
+        }
+   
+        div.logo{
+            display: flex;
+            height: 77px;
+            align-items: center;
+            justify-content: flex-start;
+            a{
+                text-decoration: none;
+                display:flex;
+                align-items:center;
+                height:30px;
+                img{
+                 
+                    padding-left:14px;
+                    margin-top:7px;
+                    max-width: 100%;
+                    max-height: 100%;
+                    object-fit: contain;
+                }
+                svg{
+                    padding-right:14px;
+                    border-right: 0.5px solid #000;
+                }
+            }
+        }
+
+        div.search{
+            
+            position: relative;
+            display:flex;
+            justify-content: center;
+            div.search_input{
+                position: relative;
+                max-width:215px;
+                width:215px;
+
+                input{
+                    width:215px;
+                    height:28px;
+                    background: #fafafa;
+                    color: #262626;
+                    outline: 0;
+                    border: solid 1px #dbdbdb;
+                    border-radius: 3px;
+                    -webkit-box-pack: center;
+                    -webkit-justify-content: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    font-size:16px;
+                    z-index: 2;
+                    box-sizing: border-box; 
+                    &::placeholder{
+                        text-align:center;
+                    }
+                    &:focus{
+                        text-align: left;
+                        padding: 3px 10px 3px 26px;
+                        background:#fff;
+                        &::placeholder{
+                            text-align: left;
+                        }
+                    }
+                }
+                span{
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(-50%,-50%);
+                    width: 12px;
+                }
+                span.search-icon{
+                    left: 35%;
+                    pointer-events: none;
+                }
+                
+
+                span.close-icon{
+                    display: none;
+                    right:2%;
+                    top:55%;
+                    svg{
+                        width: 8px;
+                        fill: #fff;
+                        background: #C7C7C7;
+                        border-radius: 50%;
+                        padding: 3px;;
+                    }
+                }
+
+                input:focus + span.search-icon{
+                    left:6.6%;
+                }
+                input:focus ~ span.close-icon{
+                    display: block;
+                }
+                
+            }
+            
+        }
+        div.buttons{
+            display:flex;
+            justify-content: flex-end;
+            div:not(:first-child),
+            div:not(:last-child){
+                margin-left:30px;
+                width:unset;
+            }
+            div.profile{
+                margin-right:15px;
+            }
+        }
+        @media only screen and(max-width:500px){
+           
+            div.logo{
+                width:50%;
+                justify-content: flex-end;
+                a{
+                    height:30px;
+                    img{
+
+                    }
+                }
+            }
+             div.search{
+                display:none;
+            }
+            div.buttons{
+                width:50%;
+                justify-content: flex-start;
+            }
+        }
+        @media only screen and(max-width:1000px){
+           
+            div.logo{
+                margin-left: 5%;
+            }
+             div.search{
+            }
+            div.buttons{
+                margin-right: 5%;
+            }
+        }
+
+        
+
+    }
+}
+
