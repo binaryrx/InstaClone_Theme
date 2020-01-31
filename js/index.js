@@ -5,18 +5,22 @@ window.onscroll = (e) =>{
     const header = document.querySelector('header');
     const sidebar = document.querySelector('.sidebar');
     const container = document.querySelector('.main_container');
+    const mediaQuery = window.matchMedia( "(min-width: 1000px)" );
 
     if(scrollDistance >= 100){
-        // console.log('in')
-        // console.log(profile)
+      
       header.style.height = '52px';
       sidebar.classList.add('fixed');
-      container.classList.add('fixed');
+
+        if(mediaQuery.matches){
+          container.classList.add('fixed');
+        } else {
+          container.classList.remove('fixed');
+      }
+
     }else{
       header.style.height = '77px';
       sidebar.classList.remove('fixed');
-      container.classList.remove('fixed');
-
 
     }
   }

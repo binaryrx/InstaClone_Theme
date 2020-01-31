@@ -133,26 +133,6 @@ header{
                 margin-right:15px;
             }
         }
-        @media only screen and(max-width:500px){
-           
-            div.logo{
-                width:50%;
-                justify-content: flex-end;
-                a{
-                    height:30px;
-                    img{
-
-                    }
-                }
-            }
-             div.search{
-                display:none;
-            }
-            div.buttons{
-                width:50%;
-                justify-content: flex-start;
-            }
-        }
         @media only screen and(max-width:1000px){
            
             div.logo{
@@ -164,6 +144,30 @@ header{
                 margin-right: 5%;
             }
         }
+        @media only screen and(max-width:500px){
+           
+            div.logo{
+                width:50%;
+                justify-content: flex-start;
+                // margin-left: unset;
+
+                a{
+                    height:30px;
+                    img{
+
+                    }
+                }
+            }
+             div.search{
+                display:none;
+            }
+            div.buttons{
+                margin-right: unset;
+                width:50%;
+                justify-content: flex-end;
+            }
+        }
+        
 
         
 
