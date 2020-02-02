@@ -22,16 +22,7 @@ main{
             top:77px;
             margin-left:642px;
         }
-        .content{
-            max-width:614px;
-            width:100%;
-            margin-right:28px;
-            .post{
-                background:tomato;
-                height:800px;
-                margin-bottom: 60px;
-            }
-        }
+        //.content in post file
     }
     .main_container.fixed{
         justify-content: flex-end;
@@ -42,12 +33,6 @@ main{
             justify-content:center;
             .sidebar{
                 display:none;
-            }
-            .content{
-                margin-right:unset;
-                .post{
-
-                }
             }
         }
     }
